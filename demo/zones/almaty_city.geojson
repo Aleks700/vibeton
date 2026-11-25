@@ -1,0 +1,1 @@
+{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"name":"Almaty (city)","note":"approximate bounding polygon for demo"},"geometry":{"type":"Polygon","coordinates":[[[76.75,43.15],[77.1,43.15],[77.1,43.4],[76.75,43.4],[76.75,43.15]]]}}]}

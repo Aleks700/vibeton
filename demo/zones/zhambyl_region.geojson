@@ -1,0 +1,1 @@
+{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"name":"Zhambyl region (approx.)","note":"approximate bounding polygon for demo"},"geometry":{"type":"Polygon","coordinates":[[[69,42.5],[75.5,42.5],[75.5,46.5],[69,46.5],[69,42.5]]]}}]}

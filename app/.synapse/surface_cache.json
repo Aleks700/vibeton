@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "repo_hash": "0f63f5f6546eded634b562a79dfda4652ce9323882327afc86800aa59f5b7a74",
+  "language": "python",
+  "framework": "fastapi",
+  "package_import_root": "catalog_area",
+  "captured_functions": false,
+  "files": {
+    "catalog_area.py": {
+      "sha": "907467747544d2ff47c117e4780e8839a087ae808434a934a25bd9c834ed2fa7",
+      "endpoints": [
+        {
+          "method": "POST",
+          "path": "/catalog/area",
+          "handler_module": "catalog_area",
+          "handler_qualname": "search_scenes_in_area",
+          "description": "Find KazEOSat scenes acquired between DateFr and DateTo whose footprint intersects the given area\n    (GeoJSON), keeping only scenes with cloud cover <= Cloud percent.\n\n    Each scene has Code, Satellite, Meta_Date, IncidenceAngle, SunEleva…",
+          "payload_example": {
+            "DateFr": "",
+            "DateTo": "",
+            "Cloud": 0,
+            "only_known": false,
+            "max_incidence": 0,
+            "limit": 0,
+            "geojson": {}
+          },
+          "headers_hint": [],
+          "suggested_tool_name": "search_scenes_in_area",
+          "file_path": "catalog_area.py",
+          "start_line": 136,
+          "end_line": 196
+        }
+      ],
+      "functions": []
+    },
+    "main.py": {
+      "sha": "ecf838edb162309082b273216a2f28b63947c4335bbc079e3db06fe963f9a75a",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/catalog",
+          "handler_module": "main",
+          "handler_qualname": "search_live_catalog",
+          "description": "Search the live KazEOSat catalog (includes scenes from the last hours) for scenes whose footprint\n    intersects the bounding box, and add U-Net cloud cover from the database.\n\n    Each scene has Code, Satellite, Meta_Date, IncidenceAngle, …",
+          "payload_example": null,
+          "headers_hint": [],
+          "suggested_tool_name": "search_live_catalog",
+          "file_path": "main.py",
+          "start_line": 72,
+          "end_line": 122
+        }
+      ],
+      "functions": []
+    },
+    "catalog_sync\\api.py": {
+      "sha": "bcbaa6b489dddb3e723fa6ec41304a6485011bb415d6409d8066f56161db589f",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/db/scenes",
+          "handler_module": "catalog_sync.api",
+          "handler_qualname": "list_scenes",
+          "description": "List KazEOSat-1 scenes stored in the database with U-Net cloud cover.\n\n    Filters by acquisition date, bounding box (scene bbox intersects the box) and maximum cloud cover.\n    Newest scenes first. Returns {total, count, data[]}.",
+          "payload_example": null,
+          "headers_hint": [],
+          "suggested_tool_name": "list_scenes",
+          "file_path": "catalog_sync\\api.py",
+          "start_line": 38,
+          "end_line": 76
+        },
+        {
+          "method": "GET",
+          "path": "/db/scenes/{code}",
+          "handler_module": "catalog_sync.api",
+          "handler_qualname": "get_scene",
+          "description": "Full record of one scene by its code (e.g. DS_DZHR1_202606120614060_KZ1_E070N43_014523),\n    including the original catalog entry and U-Net cloud cover.",
+          "payload_example": null,
+          "headers_hint": [],
+          "suggested_tool_name": "get_scene",
+          "file_path": "catalog_sync\\api.py",
+          "start_line": 80,
+          "end_line": 90
+        },
+        {
+          "method": "GET",
+          "path": "/db/status",
+          "handler_module": "catalog_sync.api",
+          "handler_qualname": "database_status",
+          "description": "Database freshness: number of scenes, how many have cloud cover, acquisition date range,\n    cloud model name and the last catalog synchronisation runs.",
+          "payload_example": null,
+          "headers_hint": [],
+          "suggested_tool_name": "database_status",
+          "file_path": "catalog_sync\\api.py",
+          "start_line": 94,
+          "end_line": 107
+        }
+      ],
+      "functions": []
+    }
+  },
+  "lines_scanned": 466,
+  "updated_at": 1795618120332
+}

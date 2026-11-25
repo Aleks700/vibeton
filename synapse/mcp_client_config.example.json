@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "geovision": {
+      "command": "npx",
+      "args": ["-y", "@2ndbrainlabs-ai/synapse-mcp"],
+      "env": {
+        "SYNAPSE_SERVER_ID": "ec106cb1-b783-42ea-9e23-d73b8f77a1d6",
+        "SYNAPSE_API_KEY": "<your Synapse API key>",
+        "ENDPOINT_BASE_URL": "http://127.0.0.1:9100"
+      }
+    }
+  }
+}

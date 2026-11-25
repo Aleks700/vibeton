@@ -1,0 +1,16 @@
+# secrets - never commit
+.env
+*.env
+!.env.example
+# local runtime
+logs/
+__pycache__/
+*.pyc
+.venv/
+# OS / editors
+Thumbs.db
+.DS_Store
+.vscode/
+# Synapse project key (encrypted, still secret)
+**/.synapse/config.json*
+*.до_*
